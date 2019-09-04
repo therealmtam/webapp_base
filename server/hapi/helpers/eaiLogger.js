@@ -258,8 +258,22 @@ EAILogger.prototype.logError = function(method_name, error, loggingContext) {
 
     methodDetails.error = eaiError.toPrintableError(error);
     this.stringifyTime(methodDetails);
-    this.log('error', message, methodDetails, loggingContext);
-    return null;
+
+    if (process.env.TIMING_AS_DEBUGPOINT !== 'true') {
+        // log method details object
+        this.log('error', message, methodDetails, loggingContext);
+        return null;
+    } else {
+        methodDetails.error = {
+            message: error.message
+        };
+        if (error.stack) {
+            methodDetails.error.stack = error.stack;
+        }
+
+        // log as a debug point
+        this.logMethodDetailsAsDebugPoint(methodDetails, 'log Error');
+    }
 };
 
 EAILogger.prototype.stringifyTime = function(MethodDetails) {

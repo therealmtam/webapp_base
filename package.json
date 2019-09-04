@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "express_start": "node server/express/index.js",
-    "hapi_start": "NODE_PATH=./server/hapi NODE_ENV=dev node server/hapi/index.js",
+    "hapi_start": "NODE_PATH=./server/hapi NODE_ENV=dev LOCAL_TEST_ENV=true node server/hapi/index.js",
     "nodemon_server": "nodemon server/index.js",
     "build": "webpack -p",
     "react-dev": "webpack -d --watch"
@@ -43,7 +43,7 @@
     "express": "^4.16.2",
     "hapi": "^18.1.0",
     "lodash": "^4.17.4",
-    "log4js": "^5.1.0",
+    "log4js": "1.1.0",
     "moment": "^2.24.0",
     "nodemon": "^1.19.2",
     "prop-types": "^15.6.0",
