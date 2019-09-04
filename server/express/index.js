@@ -8,7 +8,7 @@ const app = express();
   These modules are functions developed by us.
   Note: the relative file path.
 */
-const HelperModule = require('../helpers/helper1.js');
+const HelperModule = require('./helpers/helper1.js');
 //-------------------------------------------------------------------
 // MIDDLEWARE USED PRIOR TO ALL ROUTING:
 /*
