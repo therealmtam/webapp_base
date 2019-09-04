@@ -1,0 +1,6 @@
+node_modules
+bundle.js
+data
+config.js
+npm-debug.log
+package-lock.json

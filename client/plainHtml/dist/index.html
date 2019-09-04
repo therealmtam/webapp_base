@@ -1,0 +1,57 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.15/lodash.min.js"> </script>
+    <script>
+        _u = _.noConflict();
+    </script>
+
+
+</head>
+<body>
+
+    <div class="app">
+        Hello!
+        <p>Hello2</p>
+        <p>Hello3</p>
+        <div>Hello4</div>
+    </div>
+
+    <div id="terrible" style="background-color:#0000; font-weight:bold; color:#1234">
+        Hello!
+        <p>Hello2</p>
+        <p>Hello3</p>
+        <div>Hello4</div>
+    </div>
+
+    <script>
+        let y = $('div.app').text();
+
+        console.log(_u.map(y.split('\n'), i=> _u.trim(i)));
+
+        const x = [1,2,3];
+        _u.forEach(x, i => {
+            console.log(i);
+        });
+
+        let element = document.getElementById("terrible"); //.style="color:#9966ff"
+
+
+        element.addEventListener("click", myFunction);
+
+        function myFunction() {
+            alert ("Hello World!");
+        }
+
+
+    </script>
+
+</body>
+</html>
