@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Component1 from './Component1.jsx.js';
-import Component2 from './Component2.jsx.js';
+import Component1 from './Component1.jsx';
+import Component2 from './Component2.jsx';
 
 /**
  * Description:
