@@ -8,6 +8,7 @@ const methodName = 'registerRoutes';
 
 // routes
 const apiHealth = require('./apiHealth');
+const basePath = require('./basePath.js');
 
 module.exports.registerRoutes = async function(server) {
     // log the start of the method
@@ -15,4 +16,5 @@ module.exports.registerRoutes = async function(server) {
 
     // register routes
     await apiHealth.registerRoutes(server);
+    await basePath.registerRoute(server);
 };

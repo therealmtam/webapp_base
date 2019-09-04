@@ -73,6 +73,11 @@ class Server {
                 process.env.URL = this.server.info.uri;
             }
 
+            //register inert plugin
+            await this.server.register({
+                plugin: require('inert')
+            });
+
             // register the server routes with the server
             const routes = require('routes');
             await routes.registerRoutes(this.server);
